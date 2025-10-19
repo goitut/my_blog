@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %} Home {% endblock %}
+
+{% block content %}
+<h1 class="text-red-500 mt-5 mb-5 text-center font-bold text-4xl">My Blogs</h1>
+
+  <ul>
+    {% for blog in blogs %}
+    <li>
+      <h3>{{blog.title}}</h3>
+      <p>{{blog.content}}</p>
+      <p><b>{{blog.author}}</b></p>
+      <p>{{blog.date}}</p>
+    </li>
+
+    {% endfor %}
+  </ul>
+
+<img src="{{ STATIC_URL}} static/css/images/256781845289_status_83a3011a67de48718d71c5c7fa94bfba.jpg" alt="sample image" width="400" height="400">
+{% endblock %}
+
+
+
