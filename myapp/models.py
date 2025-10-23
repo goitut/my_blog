@@ -5,7 +5,7 @@ from django.urls import reverse
 
 # Create your models here.
 class Author(models.Model):
-  """Model representing an author"""
+  """Model representing an author."""
   first_name = models.CharField(max_length=100)
   last_name = models.CharField(max_length=100)
   email = models.CharField(max_length=100)
@@ -35,15 +35,7 @@ class Blog(models.Model):
   @classmethod
   def published(cls):
     return cls.objects.filter(is_published=True)
+  
+  
 
 
-
-# class Blog(models.Model):
-#   title = models.CharField(max_length=255)
-#   text = models.TextField()
-#   author = models.ForeignKey('auth.user', on_delete=models.CASCADE)
-#   created_date = models.DateTimeField(auto_now_add=True)
-#   published_date = models.DateTimeField(blank=True, null=True)
-
-#   def __str__(self):
-#     return self.title
