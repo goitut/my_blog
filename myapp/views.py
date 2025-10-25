@@ -5,7 +5,7 @@ from .models import Blog
 def blog_list(request):
   blogs = Blog.objects.all()
   context = {"blogs": blogs}
-  return render(request, 'blog_list.html', context)
+  return render(request, 'blog_list.html', )
 
 def index(request):
   blogs = [
